@@ -1,7 +1,7 @@
 const mongoose=require('mongoose')
 
  const connectDb= async() =>{
-    await mongoose.connect('mongodb+srv://yt:BTIOmYMGTsc4DfTy@backend1.p2nymqa.mongodb.net/todo')
+    await mongoose.connect(process.env.MONGO_URI)
     console.log('Connected to db');
     
  }
